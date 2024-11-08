@@ -1,0 +1,160 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Changed to a light gray */
+    color: #1a1a1a; /* Changed to dark color for better contrast */
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #FFD700;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('images/luffy.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column; /* Centered elements in a column */
+}
+
+.intro-text {
+    font-size: 3rem;
+}
+
+/* Adjusted margin to move the name down */
+.name-text {
+    font-size: 4rem;
+    margin-top: 20px; /* Adjust this value as needed */
+    animation: blink 1.5s step-end infinite;
+}
+
+.dots {
+    color: #FFD700;
+}
+
+/* Keyframes for blinking dots */
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Section Styling */
+.section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.skills-container, .assignments-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Skills */
+.skill img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Assignments */
+.assignment-box {
+    width: 200px;
+    background: #333;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.assignment-box:hover {
+    transform: scale(1.05);
+}
+
+.assignment-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.assignment-box a {
+    display: block;
+    color: #FFD700;
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.assignment-box p {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+/* Footer */
+.footer-section {
+    padding: 30px;
+    background-color: #333;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #FFD700;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Scroll-to-top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #FFD700;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: black;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/* Show button when scrolling */
+body.scrolled .scroll-to-top {
+    display: block;
+}
